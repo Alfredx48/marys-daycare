@@ -2,7 +2,6 @@ nav {
   display: flex;
   justify-content: flex-end;
   position: relative;
-
 }
 
 .hamburger {
@@ -42,6 +41,7 @@ nav {
 }
 
 .menu {
+  list-style-type: none;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -50,19 +50,20 @@ nav {
   right: 0;
   padding: 20px;
   background-color: azure;
-
 }
+
+.menu :hover {
+  color: mediumaquamarine;
+}
+
 
 .hamburger.open span:nth-child(1) {
   top: 9px;
   transform: rotate(45deg);
 }
 
-.hamburger.open span:nth-child(2) {
-  opacity: 0;
-}
 
-.hamburger.open span:nth-child(3) {
+.hamburger.open span:nth-child(2) {
   top: 9px;
   transform: rotate(-45deg);
 }

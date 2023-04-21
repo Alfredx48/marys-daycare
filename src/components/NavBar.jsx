@@ -14,18 +14,17 @@ const NavBar = () => {
       <div className={`hamburger ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
         <span></span>
         <span></span>
-        <span></span>
       </div>
       {isOpen && (
         <div className="menu">
           <ul>
-            <li>Contact us</li>
+            Contact us
           </ul>
           <ul>
-            <li>Contract/Paperwork</li>
+            Contract/Paperwork
           </ul>
           <ul>
-            <li>Info</li>
+            Info
           </ul>
         </div>
       )}
