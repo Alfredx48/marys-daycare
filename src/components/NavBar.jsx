@@ -1,35 +1,33 @@
-import React, { useState } from 'react';
-import '../styles/NavBar.css';
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+
+import "../styles/NavBar.css";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
-  const toggleMenu = (e) => {
-    e.stopPropagation()
-    setIsOpen(!isOpen);
+	const toggleMenu = (e) => {
+		e.stopPropagation();
+		setIsOpen(!isOpen);
   };
 
-  return (
-    <nav>
-      <div className={`hamburger ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
-        <span></span>
-        <span></span>
-      </div>
-      {isOpen && (
-        <div className="menu">
-          <ul>
-            Contact us
-          </ul>
-          <ul>
-            Contract/Paperwork
-          </ul>
-          <ul>
-            Info
-          </ul>
-        </div>
-      )}
-    </nav>
-  );
+
+	return (
+		<nav>
+			<div className={`hamburger ${isOpen ? "open" : ""}`} onClick={toggleMenu}>
+				<span></span>
+				<span></span>
+			</div>
+			{isOpen ? (
+				<div className="menu">
+					<Link to="/contact-form"> <ul> Contact us </ul> </Link> 
+					<Link to="/download-contract"> <ul >Contract</ul></Link>
+					<ul>Info</ul>
+				</div>
+			) : null}
+		</nav>
+	);
 };
 
 export default NavBar;
