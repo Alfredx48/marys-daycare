@@ -1,0 +1,22 @@
+.download {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+	background-color: azure;
+	border: none;
+	cursor: pointer;
+	margin-top: 20%;
+  padding: 10px;
+  width: 70%;
+  border-radius: 4px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.download:hover {
+	background-color: #ebd9d1;
+}
+
+.contract-header{
+  margin-top: 10%;
+}
+

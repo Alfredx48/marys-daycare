@@ -1,4 +1,5 @@
 import React from 'react';
+import "../styles/DownloadContract.css"
 
 const DownloadContract = () => {
   const downloadContract = () => {
@@ -7,8 +8,8 @@ const DownloadContract = () => {
 
   return (
     <div>
-      <h1>Download Daycare Contract</h1>
-      <button onClick={downloadContract}>Download Contract</button>
+      <h1 className='contract-header'>Download Daycare Contract</h1>
+      <button className='download' onClick={downloadContract}>Download Contract</button>
     </div>
   );
 };
