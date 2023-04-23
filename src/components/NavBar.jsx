@@ -12,18 +12,25 @@ const NavBar = () => {
 		setIsOpen(!isOpen);
   };
 
+  const navHome = () => {
+    navigate("/")
+  }
+
 
 	return (
-		<nav>
+    <nav>
+      <div onClick={navHome} className="home">
+        <h5 > Mary's DayCare</h5>
+      </div>
 			<div className={`hamburger ${isOpen ? "open" : ""}`} onClick={toggleMenu}>
 				<span></span>
 				<span></span>
 			</div>
 			{isOpen ? (
 				<div className="menu">
-					<Link to="/contact-form"> <ul> Contact us </ul> </Link> 
-					<Link to="/download-contract"> <ul >Contract</ul></Link>
-					<ul>Info</ul>
+					<Link to="/contact-form"> <a> Contact us </a> </Link> 
+					<Link to="/download-contract"> <a >Contract</a></Link>
+					<a>Info</a>
 				</div>
 			) : null}
 		</nav>

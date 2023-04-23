@@ -22,7 +22,7 @@ function Header() {
     <>
 		<div className="header-container">
 			<h1 className="floating-text">
-				{createSpans("Mary's")}
+				{createSpans(`Mary's`)}
 				<br />
 				{createSpans("Daycare")}
 			</h1>
