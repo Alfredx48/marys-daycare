@@ -3,13 +3,13 @@ import "../styles/DownloadContract.css"
 
 const DownloadContract = () => {
   const downloadContract = () => {
-    window.location.href = "/daycare-contract.pdf";
+    window.open("/daycare-contract.pdf", "_blank");
   };
 
   return (
     <div>
       <h1 className='contract-header'>Download Daycare Contract</h1>
-      <button className='download' onClick={downloadContract}>Download Contract</button>
+      <button target= "_blank" className='download' onClick={downloadContract}>Download Contract</button>
     </div>
   );
 };
