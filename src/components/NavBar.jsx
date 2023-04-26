@@ -1,14 +1,15 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 import "../styles/NavBar.css";
 
 const NavBar = () => {
 	const [isOpen, setIsOpen] = useState(false);
+
+	const location = useLocation();
 	const navigate = useNavigate();
 
 	const toggleMenu = (e) => {
-		e.stopPropagation();
 		setIsOpen(!isOpen);
 	};
 
@@ -18,9 +19,9 @@ const NavBar = () => {
 
 	return (
 		<nav>
-			<div onClick={navHome} className="home">
+		{ location.pathname === "/"  ? null : <div onClick={navHome} className="home">
 				<h5> Mary's DayCare</h5>
-			</div>
+			</div>}
 			<div className={`hamburger ${isOpen ? "open" : ""}`} onClick={toggleMenu}>
 				<span></span>
 				<span></span>
@@ -29,11 +30,11 @@ const NavBar = () => {
 				<div className="menu">
 					<Link to="/contact-form">
 						{" "}
-						<a> Contact us </a>{" "}
+						Contact us {" "}
 					</Link>
 					<Link to="/download-contract">
 						{" "}
-						<a>Contract</a>
+						Contract
 					</Link>
 					<a>Info</a>
 				</div>

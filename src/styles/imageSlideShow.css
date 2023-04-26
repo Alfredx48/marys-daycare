@@ -1,9 +1,9 @@
 .image-slideshow {
   margin-top: 10%;
   margin-right: 5%;
-  margin-left: 5%;
-  width: 40%;
-  height: 40%;
+  margin-left: 8%;
+  width: 50%;
+  height: 50%;
 }
 
 .image {
@@ -12,3 +12,11 @@
   border-radius: 5%;
 }
 
+@media (max-width: 1100px) {
+  .image-slideshow {
+    margin: auto;
+    margin-top: 10%;
+    width: 90%;
+    height: 90%;
+  }
+}
