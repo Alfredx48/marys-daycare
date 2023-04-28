@@ -1,14 +1,39 @@
-import { useState } from "react";
+import React, { useState, useEffect  } from "react";
 import { AboutUs } from "../assets/AboutUs";
 import ImageSlideShow from "./ImageSlideShow";
 import "../styles/Header.css";
 
+const images = [
+	"https://images.ctfassets.net/xf6mqlbz6glx/3fJFRKF2hElMf8a3j2SPuM/c9f1b2c7f9106316fdd53f78deb81256/All_Ages_Baby_on_Blanket_Childcare.jpg.jpg",
+];
+
+const MemoizedImageSlideShow = React.memo(ImageSlideShow);
+
 function Header() {
 	const [showMore, setShowMore] = useState(false);
+	const [displayedAboutUs, setDisplayedAboutUs] = useState("");
+
+	const updateAboutUs = () => {
+		if (window.innerWidth < 768) {
+			setDisplayedAboutUs(showMore ? AboutUs : AboutUs.slice(0, 290));
+		} else {
+			setDisplayedAboutUs(AboutUs);
+		}
+	};
 
 	const handleShowMore = () => {
-		setShowMore(!showMore);
+		setShowMore((prevShowMore) => !prevShowMore);
 	};
+
+	useEffect(() => {
+		updateAboutUs();
+		window.addEventListener("resize", updateAboutUs);
+
+		return () => {
+			window.removeEventListener("resize", updateAboutUs);
+		};
+	}, [showMore]);
+
 	const createSpans = (text) =>
 		text.split("").map((char, index) => (
 			<span
@@ -20,18 +45,6 @@ function Header() {
 			</span>
 		));
 
-	const images = [
-		"https://images.ctfassets.net/xf6mqlbz6glx/3fJFRKF2hElMf8a3j2SPuM/c9f1b2c7f9106316fdd53f78deb81256/All_Ages_Baby_on_Blanket_Childcare.jpg.jpg",
-	];
-
-	const displayAboutUs = () => {
-    if (window.innerWidth < 768) {
-      return showMore ? AboutUs : AboutUs.slice(0, 282);
-    } else {
-      return AboutUs;
-    }
-  };
-
 	return (
 		<>
 			<div className="header-container">
@@ -41,20 +54,19 @@ function Header() {
 					{createSpans("Daycare")}
 				</h1>
 				<div className="about">
-       {displayAboutUs()}
-          {!showMore && (
-            <span className="about-ellipsis" onClick={handleShowMore}>
-              ...
-            </span>
-          )}
-          {showMore && (
-            <button className="read-less-btn" onClick={handleShowMore}>
-              Read Less
-            </button>
-          )}
-        </div>
+					{displayedAboutUs}
+					{showMore ? (
+						<button className="read-less-btn" onClick={handleShowMore}>
+							Read Less
+						</button>
+					) : (
+						<span className="about-ellipsis" onClick={handleShowMore}>
+							Read More
+						</span>
+					)}
+				</div>
 			</div>
-			<ImageSlideShow images={images} />
+			<MemoizedImageSlideShow images={images} />
 		</>
 	);
 }

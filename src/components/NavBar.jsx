@@ -36,7 +36,7 @@ const NavBar = () => {
 						{" "}
 						Contract
 					</Link>
-					<a>Info</a>
+					{/* <a>Info</a> */}
 				</div>
 			) : null}
 		</nav>
