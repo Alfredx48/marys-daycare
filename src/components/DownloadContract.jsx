@@ -1,15 +1,22 @@
 import React from 'react';
-import "../styles/DownloadContract.css"
+import "../styles/DownloadContract.css";
 
 const DownloadContract = () => {
-  const downloadContract = () => {
-    window.open("/daycare-contract.pdf", "_blank");
-  };
+  const pdfPath = "/daycare-contract.pdf";
+  const downloadFileName = "daycare-contract.pdf";
 
   return (
     <div>
       <h1 className='contract-header'>Download Daycare Contract</h1>
-      <button target= "_blank" className='download' onClick={downloadContract}>Download Contract</button>
+      <a
+        href={pdfPath}
+        download={downloadFileName}
+        className='download'
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Download Contract
+      </a>
     </div>
   );
 };

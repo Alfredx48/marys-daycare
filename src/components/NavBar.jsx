@@ -19,24 +19,19 @@ const NavBar = () => {
 
 	return (
 		<nav>
-		{ location.pathname === "/"  ? null : <div onClick={navHome} className="home">
-				<h5> Mary's DayCare</h5>
-			</div>}
+			{location.pathname === "/" ? null : (
+				<div onClick={navHome} className="home">
+					<h5> Mary's DayCare</h5>
+				</div>
+			)}
 			<div className={`hamburger ${isOpen ? "open" : ""}`} onClick={toggleMenu}>
 				<span></span>
 				<span></span>
 			</div>
 			{isOpen ? (
 				<div className="menu">
-					<Link to="/contact-form">
-						{" "}
-						Contact us {" "}
-					</Link>
-					<Link to="/download-contract">
-						{" "}
-						Contract
-					</Link>
-					{/* <a>Info</a> */}
+					<Link to="/contact-form"> Contact us </Link>
+					<Link to="/download-contract"> Contract</Link>
 				</div>
 			) : null}
 		</nav>
