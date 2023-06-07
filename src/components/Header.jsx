@@ -1,74 +1,34 @@
-import React, { useState, useEffect  } from "react";
-import { AboutUs } from "../assets/AboutUs";
+// Header.js
+import React from "react";
+import Title from "./Title";
+import AboutUs from "./AboutUs";
 import ImageSlideShow from "./ImageSlideShow";
 import "../styles/Header.css";
-
-const images = [
-	"https://images.ctfassets.net/xf6mqlbz6glx/3fJFRKF2hElMf8a3j2SPuM/c9f1b2c7f9106316fdd53f78deb81256/All_Ages_Baby_on_Blanket_Childcare.jpg.jpg",
-];
+import { images } from "../assets/dayCareImages";
+import { AboutUsText } from "../assets/AboutUsText";
+import Map from "./Map";
+import ContactDetails from "./ContactDetails";
+import WorkHours from "./WorkHours";
 
 const MemoizedImageSlideShow = React.memo(ImageSlideShow);
 
 function Header() {
-	const [showMore, setShowMore] = useState(false);
-	const [displayedAboutUs, setDisplayedAboutUs] = useState("");
+  return (
+    <>
+      <div className="header-container">
+        <Title text="Mary's" />
+        <Title text="Daycare" />
+        <AboutUs text={AboutUsText} />
+        <MemoizedImageSlideShow images={images} />
+        <div >
+          <Map />
+          <ContactDetails /> 
+          <WorkHours /> 
 
-	const updateAboutUs = () => {
-		if (window.innerWidth < 768) {
-			setDisplayedAboutUs(showMore ? AboutUs : AboutUs.slice(0, 290));
-		} else {
-			setDisplayedAboutUs(AboutUs);
-		}
-	};
-
-	const handleShowMore = () => {
-		setShowMore((prevShowMore) => !prevShowMore);
-	};
-
-	useEffect(() => {
-		updateAboutUs();
-		window.addEventListener("resize", updateAboutUs);
-
-		return () => {
-			window.removeEventListener("resize", updateAboutUs);
-		};
-	}, [showMore]);
-
-	const createSpans = (text) =>
-		text.split("").map((char, index) => (
-			<span
-				key={index}
-				className="char"
-				style={{ "--animation-delay": `${index * 50}ms` }}
-			>
-				{char}
-			</span>
-		));
-
-	return (
-		<>
-			<div className="header-container">
-				<h1 className="floating-text">
-					{createSpans(`Mary's`)}
-					<br />
-					{createSpans("Daycare")}
-				</h1>
-				<div className="about">
-					{displayedAboutUs}
-					{showMore ? (
-						<button className="read-less-btn" onClick={handleShowMore}>
-							Read Less
-						</button>
-					) : (
-						<span className="about-ellipsis" onClick={handleShowMore}>
-							Read More
-						</span>
-					)}
-				</div>
-			</div>
-			<MemoizedImageSlideShow images={images} />
-		</>
-	);
+        </div>
+      </div>
+    </>
+  );
 }
 
 export default Header;
