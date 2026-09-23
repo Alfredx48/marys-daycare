@@ -10,7 +10,7 @@ function Hero() {
 				<div className="hero-copy">
 					<p className="eyebrow">{business.type} · Foster City, CA</p>
 					<Title text={business.name} />
-					<p className="hero-lead">
+					<p className="hero-lead" suppressHydrationWarning>
 						A warm, safe home away from home where little ones play, learn, and are loved,
 						with {yearsOpen} years of caring for Foster City families.
 					</p>

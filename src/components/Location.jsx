@@ -4,6 +4,7 @@ import "../styles/Location.css";
 
 function Location() {
 	const { street, city, state, zip } = business.address;
+	const nearby = business.serviceArea.filter((area) => area !== city);
 
 	return (
 		<section id="location" className="section" aria-labelledby="location-title">
@@ -11,6 +12,10 @@ function Location() {
 				<div>
 					<p className="eyebrow">Find us</p>
 					<h2 id="location-title">In the heart of Foster City</h2>
+					<p>
+						A quiet, family-friendly neighborhood that's easy to reach from{" "}
+						{nearby.slice(0, -1).join(", ")}, and {nearby.at(-1)}.
+					</p>
 					<address className="location-address">
 						<Icon name="pin" />
 						<span>

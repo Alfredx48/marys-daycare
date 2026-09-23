@@ -6,8 +6,10 @@ import Gallery from "./components/Gallery";
 import HoursInfo from "./components/HoursInfo";
 import Enroll from "./components/Enroll";
 import Location from "./components/Location";
+import Faq from "./components/Faq";
 import ContactUs from "./components/ContactUs";
 import Footer from "./components/Footer";
+import StructuredData from "./components/StructuredData";
 
 function App() {
 	return (
@@ -24,9 +26,11 @@ function App() {
 				<HoursInfo />
 				<Enroll />
 				<Location />
+				<Faq />
 				<ContactUs />
 			</main>
 			<Footer />
+			<StructuredData />
 		</>
 	);
 }

@@ -23,7 +23,7 @@ function Footer() {
 					</p>
 				</div>
 			</div>
-			<p className="container copyright">
+			<p className="container copyright" suppressHydrationWarning>
 				© {new Date().getFullYear()} {business.name}. All rights reserved.
 			</p>
 		</footer>

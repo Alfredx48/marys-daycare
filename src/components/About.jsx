@@ -11,7 +11,7 @@ function About() {
 				</div>
 				<div className="about-body">
 					{aboutParagraphs.map((paragraph) => (
-						<p key={paragraph}>{paragraph}</p>
+						<p key={paragraph} suppressHydrationWarning>{paragraph}</p>
 					))}
 					<p className="signature">
 						— {business.owner}, owner &amp; caregiver

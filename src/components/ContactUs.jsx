@@ -46,7 +46,7 @@ function ContactUs() {
 	};
 
 	return (
-		<section id="contact" className="section section-tinted" aria-labelledby="contact-title">
+		<section id="contact" className="section" aria-labelledby="contact-title">
 			<div className="container contact-grid">
 				<div>
 					<p className="eyebrow">Contact</p>
