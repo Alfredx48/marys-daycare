@@ -8,6 +8,8 @@ export default defineConfig({
     host: '0.0.0.0',
     port: 4000,
     cors: true,
+    // Leading dot allows any ngrok subdomain, since the free URL changes each session.
+    allowedHosts: ['.ngrok-free.app'],
   },
 })
 

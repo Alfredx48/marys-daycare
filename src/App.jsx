@@ -1,26 +1,32 @@
-import "./App.css";
 import NavBar from "./components/NavBar";
-import { Routes, Route } from "react-router-dom";
-import DownloadContract from "./components/DownloadContract";
-import Header from "./components/Header";
-import { ContactUs } from "./components/ContactUs";
-import Map from "./components/Map";
-import CopyRights from "./components/CopyRights";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Highlights from "./components/Highlights";
+import Gallery from "./components/Gallery";
+import HoursInfo from "./components/HoursInfo";
+import Enroll from "./components/Enroll";
+import Location from "./components/Location";
+import ContactUs from "./components/ContactUs";
+import Footer from "./components/Footer";
 
 function App() {
-	
 	return (
 		<>
+			<a className="skip-link" href="#main">
+				Skip to content
+			</a>
 			<NavBar />
-			<div className="App">
-				<Routes>
-					<Route path="/" element={<Header />} />
-					<Route path="/map" element={<Map />} /> 
-					<Route path="/download-contract" element={<DownloadContract />} />
-					<Route path="/contact-form" element={<ContactUs />} />
-				</Routes>
-			</div>
-				<CopyRights />
+			<main id="main">
+				<Hero />
+				<About />
+				<Highlights />
+				<Gallery />
+				<HoursInfo />
+				<Enroll />
+				<Location />
+				<ContactUs />
+			</main>
+			<Footer />
 		</>
 	);
 }

@@ -1,19 +1,19 @@
-// Title.js
-import React from 'react';
-
+// Each letter floats in one after another. Screen readers get the plain text.
 function Title({ text }) {
-  const createSpans = (text) => 
-    text.split("").map((char, index) => (
-      <span
-        key={index}
-        className="char"
-        style={{ "--animation-delay": `${index * 50}ms` }}
-      >
-        {char}
-      </span>
-    ));
-
-  return <h1 className="floating-text">{createSpans(text)}</h1>;
+	return (
+		<h1 className="floating-text" aria-label={text}>
+			{text.split("").map((char, index) => (
+				<span
+					key={index}
+					className="char"
+					aria-hidden="true"
+					style={{ "--animation-delay": `${index * 45}ms` }}
+				>
+					{char === " " ? " " : char}
+				</span>
+			))}
+		</h1>
+	);
 }
 
 export default Title;

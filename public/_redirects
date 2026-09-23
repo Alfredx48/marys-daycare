@@ -1,0 +1,4 @@
+# Old page URLs now point at sections of the single-page site.
+/contact-form        /#contact    301
+/download-contract   /#enroll     301
+/map                 /#location   301

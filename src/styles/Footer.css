@@ -1,0 +1,36 @@
+.site-footer {
+	padding-block: 48px 32px;
+	background: var(--ink);
+	color: #d9d6e3;
+	font-size: 0.95rem;
+}
+
+.site-footer p {
+	margin: 0 0 0.3rem;
+}
+
+.site-footer a {
+	color: #fff;
+}
+
+.footer-grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 24px;
+}
+
+.footer-brand {
+	font-family: var(--font-display);
+	font-weight: 700;
+	font-size: 1.3rem;
+	color: #fff;
+}
+
+.copyright {
+	margin-top: 32px !important;
+	padding-top: 20px;
+	border-top: 1px solid rgb(255 255 255 / 0.12);
+	color: #a9a5b8;
+	font-size: 0.85rem;
+}
