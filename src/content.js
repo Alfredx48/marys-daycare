@@ -50,14 +50,14 @@ export const highlights = [
 		text: "Hands-on play and structured activities that build curiosity, language, and confidence.",
 	},
 	{
+		icon: "friends",
+		title: "Making friends",
+		text: "Playing, sharing, and working together with a small group of friends every day.",
+	},
+	{
 		icon: "meal",
 		title: "Home-cooked meals",
 		text: "Nutritious meals made fresh in our kitchen. Ask about joining the meal program.",
-	},
-	{
-		icon: "tree",
-		title: "Neighborhood outings",
-		text: "Short walking trips to the park and public library when the weather is nice.",
 	},
 	{
 		icon: "heart",
