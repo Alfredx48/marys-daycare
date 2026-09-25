@@ -39,7 +39,7 @@ export const hours = [
 
 export const aboutParagraphs = [
 	`Mary's Daycare is a family-owned, licensed child care home in Foster City, just minutes from San Mateo. For ${yearsOpen} years, Mary has cared for neighborhood children as if they were her own, in a warm, safe home where little ones can grow at their own pace.`,
-	"Days balance play-based learning with structured activities that support each child's physical, emotional, and social development. Because we're a small home daycare, every child gets individual attention, and every parent knows exactly who is caring for their child.",
+	"Days balance play-based learning with structured activities that support each child's physical, emotional, and social development. Because we're a warm, loving home daycare, every child gets individual attention, and every parent knows exactly who is caring for their child.",
 	"Home-cooked, balanced meals with fruits, vegetables, and proteins are part of what makes the day feel like family.",
 ];
 
@@ -52,7 +52,7 @@ export const highlights = [
 	{
 		icon: "friends",
 		title: "Making friends",
-		text: "Playing, sharing, and working together with a small group of friends every day.",
+		text: "Playing, sharing, and working together with friends every day.",
 	},
 	{
 		icon: "meal",
@@ -61,8 +61,8 @@ export const highlights = [
 	},
 	{
 		icon: "heart",
-		title: "Small & personal",
-		text: "A family-style group where every child is known, loved, and looked after.",
+		title: "Warm & personal",
+		text: "A family-style home where every child is known, loved, and looked after.",
 	},
 	{
 		icon: "sprout",
@@ -100,7 +100,7 @@ export const faqs = [
 	},
 	{
 		q: "What is a family child care home?",
-		a: "A family child care home provides licensed child care in the caregiver's own home for a small group of children. Many parents choose it for the smaller group, the consistent caregiver, and the warm, home-like setting.",
+		a: "A family child care home provides licensed child care in the caregiver's own home. Many parents choose it for the personal attention, the consistent caregiver, and the warm, home-like setting.",
 	},
 	{
 		q: "Do you provide meals?",
