@@ -42,7 +42,7 @@ function Enroll() {
 						<p className="muted">
 							The enrollment packet has the daycare contract, fees &amp; policies, and the
 							required California licensing forms. No need to fill it out before visiting.
-							PDF, 11 pages.
+							PDF, 12 pages.
 						</p>
 					</div>
 					<a className="btn btn-primary" href={business.contractPdf} download="marys-daycare-enrollment-packet.pdf">
