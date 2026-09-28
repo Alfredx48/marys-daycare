@@ -22,20 +22,22 @@ function ContactUs() {
 		// Hidden field that only bots fill in.
 		if (data.company) return;
 
-		// The EmailJS template only knows user_name, user_email and message,
-		// so the optional details are folded into the message.
-		const details = [
-			data.phone && `Phone: ${data.phone}`,
-			data.child_age && `Child's age: ${data.child_age}`,
-		].filter(Boolean);
-		const message = details.length ? `${details.join("\n")}\n\n${data.message}` : data.message;
+		// Field names match the variables in the EmailJS template.
+		const params = {
+			user_name: data.user_name,
+			user_email: data.user_email,
+			reply_to: data.user_email,
+			phone: data.phone.trim() || "Not provided",
+			child_age: data.child_age.trim() || "Not provided",
+			message: data.message,
+		};
 
 		setStatus("sending");
 		try {
 			await emailjs.send(
 				EMAILJS.serviceId,
 				EMAILJS.templateId,
-				{ user_name: data.user_name, user_email: data.user_email, message },
+				params,
 				{ publicKey: EMAILJS.publicKey, limitRate: { throttle: 10000 } }
 			);
 			formEl.reset();
