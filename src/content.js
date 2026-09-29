@@ -40,7 +40,7 @@ export const hours = [
 export const aboutParagraphs = [
 	`Mary's Daycare is a family-owned, licensed child care home in Foster City, just minutes from San Mateo. For ${yearsOpen} years, Mary has cared for neighborhood children as if they were her own, in a warm, safe home where little ones can grow at their own pace.`,
 	"Days balance play-based learning with structured activities that support each child's physical, emotional, and social development. Because we're a warm, loving home daycare, every child gets individual attention, and every parent knows exactly who is caring for their child.",
-	"Home-cooked, balanced meals with fruits, vegetables, and proteins are part of what makes the day feel like family.",
+	"Home-cooked, balanced meals with fruits, vegetables, milk, and proteins are part of what makes the day feel like family.",
 ];
 
 export const highlights = [
@@ -57,7 +57,7 @@ export const highlights = [
 	{
 		icon: "meal",
 		title: "Home-cooked meals",
-		text: "Nutritious meals made fresh in our kitchen. Ask about joining the meal program.",
+		text: "Nutritious meals made fresh in our kitchen.",
 	},
 	{
 		icon: "heart",
@@ -79,7 +79,6 @@ export const highlights = [
 export const whatToBring = [
 	"Diapers and wipes, if your child uses them",
 	"A spare change of clothes",
-	"Food and drinks, unless your child is on the meal program",
 	"Any medicine in its original labeled container, with a signed medication form",
 ];
 
@@ -96,7 +95,7 @@ export const faqs = [
 	},
 	{
 		q: "Is Mary's Daycare licensed?",
-		a: "Yes. Mary's Daycare is a licensed family child care home, licensed by the California Department of Social Services. Every adult who lives or works in a licensed child care home must pass a background check.",
+		a: "Yes. Mary's Daycare is a licensed family child care home, licensed by the California Department of Social Services. Every adult who lives or works in a licensed child care home must pass a background check, and Mary is CPR and first aid certified.",
 	},
 	{
 		q: "What is a family child care home?",
@@ -104,7 +103,7 @@ export const faqs = [
 	},
 	{
 		q: "Do you provide meals?",
-		a: "Yes. We serve home-cooked, balanced meals through our meal program. Families who aren't on the meal program send food and drinks from home.",
+		a: "Yes. We serve home-cooked, balanced meals made fresh in our kitchen, with fruits, vegetables, milk, and proteins. Children with allergies or special dietary needs bring food from home.",
 	},
 	{
 		q: "Do you help with potty training?",
